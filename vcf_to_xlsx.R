@@ -20,7 +20,8 @@ colnames_vcf <- gsub("##", "#", colnames_vcf[c(8,26,10:12,15:21,39:40,42:54,57)]
 colnames_vcf <- gsub("^.|=.*", "", colnames_vcf)
 
 # 3.3 define list of files
-files <- list.files(path="./Input/", pattern="*.vcf", full.names=TRUE, recursive=FALSE) 
+path <- "/full_path/to/vcf_files" #preferably a folder with your downloaded vcf files
+files <- list.files(path=path, pattern="*.vcf", full.names=TRUE, recursive=FALSE) 
 
 # 3.4 initialize the for loop
 for (i in 1:length(files)) {
